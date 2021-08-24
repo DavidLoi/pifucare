@@ -4,22 +4,22 @@ const brands = [
   {
     id: 1,
     image: pic,
-    name: "wew1",
+    name: "kek",
   },
   {
     id: 2,
     image: pic,
-    name: "wew2",
+    name: "wew",
   },
   {
     id: 3,
     image: pic,
-    name: "wew3",
+    name: "pepe",
   },
   {
     id: 4,
     image: pic,
-    name: "wew4",
+    name: "lul",
   },
 ];
 

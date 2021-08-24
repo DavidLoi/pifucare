@@ -12,6 +12,7 @@ import Contact from "./pages/Contact";
 // Components
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import SingleBrand from "./pages/SingleBrand";
 
 const App = () => {
   return (
@@ -32,6 +33,9 @@ const App = () => {
         </Route>
         <Route path="/contact">
           <Contact />
+        </Route>
+        <Route path="/:name">
+          <SingleBrand />
         </Route>
       </Switch>
       <Footer />

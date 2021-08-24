@@ -446,7 +446,7 @@ Shop
 
 /*
 ===============
-FAQ
+Brands
 ===============
 */
 .brands-title {
@@ -457,6 +457,47 @@ FAQ
 }
 .brands-container {
   display: grid;
+  min-width: 975px;
+  width: 90%;
+  grid-template-columns: auto auto auto;
+  grid-gap: 0px;
+  margin: 0 auto;
+}
+
+/*
+===============
+Brand
+===============
+*/
+.brand-wrapper {
+  position: relative;
+  min-width: 325px;
+  height: 240px;
+  background-color: lightgray;
+}
+.brand-image {
+  height: 240px;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.brand-name {
+  position: absolute;
+  top: 80px;
+  right: 50%;
+  transform: translateX(50%);
+}
+.brand-btn {
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  top: 130px;
+  z-index: 10;
+  line-height: 40px;
+}
+.brand-btn:hover + .brand-image {
+  opacity: 0.3;
 }
 
 /*

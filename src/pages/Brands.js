@@ -1,5 +1,5 @@
 import React from "react";
-import Brand from "../components/Brand";
+import BrandButton from "../components/BrandButton";
 import brands from "../data/BrandInfo";
 
 const Brands = () => {
@@ -11,7 +11,9 @@ const Brands = () => {
       </div>
       <div className="brands-container">
         {brands.map((brand, index) => {
-          <Brand key={index} name={brand.name} image={brand.image} />;
+          return (
+            <BrandButton key={index} name={brand.name} image={brand.image} />
+          );
         })}
       </div>
     </div>

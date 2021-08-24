@@ -20,21 +20,21 @@ const products = [
     image: pic,
     name: "browney3",
     price: "C$2.50",
-    brand: "wew",
+    brand: "kek",
   },
   {
     id: 4,
     image: pic,
     name: "browney4",
     price: "C$2.50",
-    brand: "wew",
+    brand: "pepe",
   },
   {
     id: 5,
     image: pic,
     name: "browney5",
     price: "C$2.50",
-    brand: "wew",
+    brand: "lul",
   },
   {
     id: 6,
@@ -104,7 +104,7 @@ const products = [
     image: pic,
     name: "browney15",
     price: "C$2.50",
-    brand: "wew",
+    brand: "lul",
   },
   {
     id: 16,
@@ -118,7 +118,7 @@ const products = [
     image: pic,
     name: "browney17",
     price: "C$2.50",
-    brand: "wew",
+    brand: "pepe",
   },
   {
     id: 18,
@@ -132,7 +132,7 @@ const products = [
     image: pic,
     name: "browney19",
     price: "C$2.50",
-    brand: "wew",
+    brand: "kek",
   },
   {
     id: 20,
