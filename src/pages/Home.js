@@ -55,9 +55,9 @@ const Home = () => {
       </div>
       <div className="gallery">
         <div className="gallery-container">
-          {images.map((object) => {
+          {images.map((object, index) => {
             return (
-              <div className="gallery-img-wrapper">
+              <div className="gallery-img-wrapper" key={index}>
                 <img
                   key={object}
                   className="gallery-img"

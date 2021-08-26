@@ -6,7 +6,6 @@ import data from "../data/ProductInfo";
 const Carousel = () => {
   let products = data;
   const [index, setIndex] = useState(0);
-  console.log(index);
 
   useEffect(() => {
     const endIndex = products.length - 1;
@@ -57,7 +56,14 @@ const Carousel = () => {
           ) {
             position = "lastSlide";
           }
-          return <Product size="big" pos={position} {...product} />;
+          return (
+            <Product
+              key={productIndex}
+              size="big"
+              pos={position}
+              {...product}
+            />
+          );
         })}
       </div>
     </section>

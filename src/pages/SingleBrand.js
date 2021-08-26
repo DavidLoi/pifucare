@@ -4,9 +4,9 @@ import Product from "../components/Product";
 import data from "../data/ProductInfo";
 
 const SingleBrand = () => {
-  const { name } = useParams();
+  const { brand } = useParams();
 
-  const newData = data.filter((product) => product.brand === name);
+  const newData = data.filter((product) => product.brand === brand);
   const num = Math.min(12, newData.length);
 
   const [items, setItems] = useState(num);
@@ -14,7 +14,7 @@ const SingleBrand = () => {
 
   useEffect(() => {
     setProducts(newData.slice(0, items));
-  }, [items, newData]);
+  }, [newData, items]);
 
   return (
     <div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import "./App.css";
+import ScrollToTop from "./ScrollToTop";
 
 // Pages
 import Home from "./pages/Home";
@@ -13,31 +14,37 @@ import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SingleBrand from "./pages/SingleBrand";
+import SingleProduct from "./pages/SingleProduct";
 
 const App = () => {
   return (
     <div className="App">
       <Navbar />
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/shop">
-          <Shop />
-        </Route>
-        <Route path="/brands">
-          <Brands />
-        </Route>
-        <Route path="/faq">
-          <FAQ />
-        </Route>
-        <Route path="/contact">
-          <Contact />
-        </Route>
-        <Route path="/:name">
-          <SingleBrand />
-        </Route>
-      </Switch>
+      <ScrollToTop>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/shop">
+            <Shop />
+          </Route>
+          <Route path="/brands">
+            <Brands />
+          </Route>
+          <Route path="/faq">
+            <FAQ />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route exact path="/:brand">
+            <SingleBrand />
+          </Route>
+          <Route path="/:brand/:name/:id">
+            <SingleProduct />
+          </Route>
+        </Switch>
+      </ScrollToTop>
       <Footer />
     </div>
   );

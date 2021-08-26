@@ -138,11 +138,11 @@ Navbar
   position: relative;
   margin: 0px 100px;
 }
-li {
+.nav-links-container li {
   display: inline;
   margin: 14px 16px;
 }
-li:hover {
+.nav-links-container li:hover {
   cursor: pointer;
 }
 .logo {
@@ -374,6 +374,7 @@ article.lastSlide {
   width: 22%;
   height: 100%;
   opacity: 0;
+  left: 0;
   transform: translateX(-100%);
 }
 article.nextSlide {
@@ -432,6 +433,66 @@ article.small .product-img {
 
 /*
 ===============
+SingleProduct
+===============
+*/
+.singleproduct-container {
+  display: block;
+  margin: auto;
+  width: 980px;
+}
+.singleproduct-imgcontainer {
+  display: block;
+  margin: 80px auto 80px;
+  width: 100%;
+  height: 551px;
+  overflow: hidden;
+}
+.singleproduct-img {
+  min-width: 100%;
+  vertical-align: center;
+  transform: translateY(-25%);
+}
+.singleproduct-info {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: 100%;
+}
+.singleproduct-title {
+  font-size: 24px;
+}
+.singleproduct-desc {
+  margin: 0px 32px 16px;
+}
+.singleproduct-desc ul {
+  margin-bottom: 16px;
+  list-style: circle inside none;
+}
+.singleproduct-desc li {
+  padding-left: 16px;
+}
+.singleproduct-price {
+  margin: 0px 32px 16px;
+}
+.singleproduct-price input {
+  width: 100px;
+  padding: 8px;
+  font-size: 16px;
+  margin-bottom: 32px;
+}
+.singleproduct-price button {
+  display: block;
+  width: 100%;
+  background-color: darkolivegreen;
+  color: white;
+}
+.singleproduct-price button:hover {
+  background-color: white;
+  color: darkolivegreen;
+}
+
+/*
+===============
 Shop
 ===============
 */
@@ -466,7 +527,7 @@ Brands
 
 /*
 ===============
-Brand
+SingleBrand
 ===============
 */
 .brand-wrapper {
