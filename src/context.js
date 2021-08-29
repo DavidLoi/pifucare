@@ -1,5 +1,4 @@
 import React, { useState, useContext } from "react";
-import data from "./data/ProductInfo";
 
 const AppContext = React.createContext();
 

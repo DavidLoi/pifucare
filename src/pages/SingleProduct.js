@@ -5,8 +5,8 @@ import data from "../data/ProductInfo";
 
 const SingleProduct = () => {
   const [amount, setAmount] = useState(1);
-  const { name, id } = useParams();
-  const { add } = useGlobalContext();
+  const { id } = useParams();
+  const { add, openCart } = useGlobalContext();
   const product = data.filter((product) => product.id === parseInt(id))[0];
 
   const handleChange = (e) => {
@@ -16,7 +16,11 @@ const SingleProduct = () => {
   return (
     <div className="singleproduct-container">
       <div className="singleproduct-imgcontainer">
-        <img className="singleproduct-img" src={product.image} />
+        <img
+          className="singleproduct-img"
+          src={product.image}
+          alt={product.name}
+        />
       </div>
       <div className="singleproduct-info">
         <div className="singleproduct-desc">
@@ -56,7 +60,10 @@ const SingleProduct = () => {
           ></input>
           <button
             className="btn-rect singleproduct-btn"
-            onClick={() => add(parseInt(id), amount, product.price)}
+            onClick={() => {
+              add(parseInt(id), amount, product.price);
+              openCart();
+            }}
           >
             Add to Cart
           </button>
