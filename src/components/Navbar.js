@@ -6,8 +6,10 @@ import {
   FaChevronDown,
   FaShoppingCart,
 } from "react-icons/fa";
+import { useGlobalContext } from "../context";
 
 const Navbar = () => {
+  const { openCart } = useGlobalContext();
   return (
     <nav className="navbar">
       <div className="nav-center">
@@ -71,7 +73,7 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <button className="nav-link">
+            <button className="nav-link" onClick={openCart}>
               <FaShoppingCart />
             </button>
           </li>

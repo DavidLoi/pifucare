@@ -10,7 +10,7 @@ const Product = ({ size, pos, id, image, name, price, brand }) => {
           <div className="quick-view">quick view</div>
         </div>
         <p className="product-text">{name}</p>
-        <p className="product-text">{price}</p>
+        <p className="product-text">C${price}</p>
       </article>
     </Link>
   );

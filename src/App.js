@@ -15,11 +15,13 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SingleBrand from "./pages/SingleBrand";
 import SingleProduct from "./pages/SingleProduct";
+import Cart from "./components/Cart";
 
 const App = () => {
   return (
     <div className="App">
       <Navbar />
+      <Cart />
       <ScrollToTop>
         <Switch>
           <Route exact path="/">

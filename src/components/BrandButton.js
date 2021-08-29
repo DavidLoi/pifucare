@@ -7,7 +7,7 @@ const BrandButton = ({ name, image }) => {
       <Link to={`/${name}`} className="brand-btn btn-circ">
         Buy Now
       </Link>
-      <img className="brand-image" src={image} alt={name} />
+      <img className="brand-img" src={image} alt={name} />
       <h3 className="brand-name">{name}</h3>
     </div>
   );
