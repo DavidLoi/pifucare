@@ -9,12 +9,13 @@ import Shop from "./pages/Shop";
 import Brands from "./pages/Brands";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
+import Checkout from "./pages/Checkout";
+import SingleBrand from "./pages/SingleBrand";
+import SingleProduct from "./pages/SingleProduct";
 
 // Components
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import SingleBrand from "./pages/SingleBrand";
-import SingleProduct from "./pages/SingleProduct";
 import Cart from "./components/Cart";
 
 const App = () => {
@@ -44,6 +45,9 @@ const App = () => {
           </Route>
           <Route path="/:brand/:name/:id">
             <SingleProduct />
+          </Route>
+          <Route path="/checkout">
+            <Checkout />
           </Route>
         </Switch>
       </ScrollToTop>

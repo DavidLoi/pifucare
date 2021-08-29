@@ -14,7 +14,7 @@ const SingleBrand = () => {
 
   useEffect(() => {
     setProducts(newData.slice(0, items));
-  }, [newData, items]);
+  }, [items]);
 
   return (
     <div>
@@ -30,7 +30,7 @@ const SingleBrand = () => {
               className="btn-rect"
               onClick={() => {
                 let newItems = items + 12;
-                if (items > newData.length) {
+                if (newItems > newData.length) {
                   newItems = newData.length;
                 }
                 setItems(newItems);

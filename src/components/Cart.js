@@ -2,6 +2,7 @@ import React from "react";
 import { useGlobalContext } from "../context";
 import { FaChevronRight } from "react-icons/fa";
 import CartItem from "./CartItem";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const { isCartOpen, closeCart, cart } = useGlobalContext();
@@ -35,7 +36,9 @@ const Cart = () => {
             </div>
           </div>
           <div className="cart-footer">
-            <button className="btn-rect">Checkout</button>
+            <Link to="/checkout">
+              <button className="btn-rect">Checkout</button>
+            </Link>
           </div>
         </div>
       </div>

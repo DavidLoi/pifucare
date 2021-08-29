@@ -25,7 +25,7 @@ const Shop = () => {
               className="btn-rect"
               onClick={() => {
                 let newItems = items + 12;
-                if (items > data.length) {
+                if (newItems > data.length) {
                   newItems = data.length;
                 }
                 setItems(newItems);
