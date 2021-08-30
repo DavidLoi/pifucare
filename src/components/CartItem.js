@@ -1,15 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useGlobalContext } from "../context";
 import data from "../data/ProductInfo";
 
 const CartItem = ({ cartItem }) => {
-  const { increase, decrease, remove } = useGlobalContext();
+  const { increase, decrease, remove, closeCart } = useGlobalContext();
   const item = data.find((item) => item.id === cartItem.id);
   return (
     <div className="cartItem">
-      <button className="cartItem-btn">
+      <Link
+        className="cartItem-btn"
+        to={`/${item.brand}/${item.name}/${item.id}`}
+        onClick={closeCart}
+      >
         <img className="cartItem-img" src={item.image} alt={item.name} />
-      </button>
+      </Link>
       <div className="cartItem-content">
         <p className="cartItem-name">
           [{item.brand}] {item.name}
@@ -34,7 +39,7 @@ const CartItem = ({ cartItem }) => {
         </div>
       </div>
       <button className="cartItem-remove" onClick={() => remove(cartItem.id)}>
-        X
+        x
       </button>
     </div>
   );

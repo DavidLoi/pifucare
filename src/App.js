@@ -9,7 +9,7 @@ import Shop from "./pages/Shop";
 import Brands from "./pages/Brands";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
-import Checkout from "./pages/Checkout";
+import Checkout from "./components/Checkout";
 import SingleBrand from "./pages/SingleBrand";
 import SingleProduct from "./pages/SingleProduct";
 
@@ -40,14 +40,14 @@ const App = () => {
           <Route path="/contact">
             <Contact />
           </Route>
+          <Route path="/checkout">
+            <Checkout />
+          </Route>
           <Route exact path="/:brand">
             <SingleBrand />
           </Route>
           <Route path="/:brand/:name/:id">
             <SingleProduct />
-          </Route>
-          <Route path="/checkout">
-            <Checkout />
           </Route>
         </Switch>
       </ScrollToTop>

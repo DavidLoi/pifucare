@@ -703,10 +703,8 @@ CartItem
   border-bottom: 1px solid gray;
 }
 .cartItem-btn {
-  background-color: white;
   width: 80px;
   height: 80px;
-  border: transparent;
 }
 .cartItem img {
   width: 80px;
@@ -748,4 +746,138 @@ CartItem
 }
 .cartItem:hover .cartItem-remove {
   opacity: 1;
+}
+
+/*
+===============
+Checkout
+===============
+*/
+.checkout-container {
+  width: 960px;
+  margin: 0 auto;
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 528px 288px;
+  grid-column-gap: 52px;
+}
+.checkout {
+  width: 528px;
+}
+.checkout-title {
+  font-size: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid gray;
+  margin-bottom: 0px;
+}
+.checkout-discount {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 32px 0;
+  border: 2px solid lightgray;
+  border-radius: 8px;
+  outline: none;
+}
+.checkout-discount:focus {
+  border: 2px solid darkolivegreen;
+  border-radius: 8px;
+}
+.checkout-discount:valid + .checkout-applyDiscount {
+  background: darkolivegreen;
+  color: white;
+}
+.checkout-applyDiscount {
+  width: 20%;
+  float: right;
+  padding: 12px 20px;
+  margin: 32px 0;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background: transparent;
+  font-size: 16px;
+}
+.checkout-subtotal dl {
+  height: 136px;
+  margin-top: 16px;
+  border-bottom: 1px solid gray;
+}
+.checkout-info dt {
+  float: left;
+  clear: left;
+  margin: 8px 0;
+  line-height: 24px;
+}
+.checkout-info dd {
+  float: right;
+  font-weight: bold;
+  margin: 8px 0;
+  line-height: 24px;
+}
+.checkout-btn {
+  height: 48px;
+  width: 100%;
+  background: darkolivegreen;
+  color: white;
+  font-size: 24px;
+}
+.checkout-btn:hover {
+  background: white;
+  color: darkolivegreen;
+}
+
+/*
+===============
+CheckoutItem
+===============
+*/
+.checkoutItem-container {
+  display: grid;
+  grid-template-columns: 122px 300px 90px 16px;
+  padding: 32px 0px;
+  border-bottom: 1px solid gray;
+}
+.checkoutItem-btn {
+  width: 100px;
+  height: 100px;
+}
+.checkoutItem-img {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+.checkoutItem-container p {
+  width: 300px;
+}
+.checkoutItem-price {
+  color: gray;
+}
+.checkoutItem-quantity {
+  display: flex;
+  flex-direction: row;
+  width: 80px;
+  height: 28px;
+  border: 1px solid black;
+}
+.checkoutItem-quantity button {
+  width: 23px;
+  background: transparent;
+  border: transparent;
+}
+.checkoutItem-quantity p {
+  width: 34px;
+  text-align: center;
+}
+.checkoutItem-total {
+  font-size: 20px;
+  color: black;
+}
+.checkoutItem-remove {
+  height: 16px;
+  width: 12px;
+  background: transparent;
+  border: transparent;
+  font-size: 16px;
+}
+.checkout-email {
+  padding-top: 16px;
 }

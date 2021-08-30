@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 
 const Cart = () => {
   const { isCartOpen, closeCart, cart } = useGlobalContext();
-  console.log(cart);
 
   return (
     <div>
@@ -37,7 +36,9 @@ const Cart = () => {
           </div>
           <div className="cart-footer">
             <Link to="/checkout">
-              <button className="btn-rect">Checkout</button>
+              <button className="btn-rect" onClick={closeCart}>
+                Checkout
+              </button>
             </Link>
           </div>
         </div>
