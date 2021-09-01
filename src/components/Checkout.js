@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import CheckoutItem from "./CheckoutItem";
 import { useGlobalContext } from "../context";
 
 const Checkout = () => {
-  const [showEmail, setShowEmail] = useState(false);
-  const [showDiscount, setShowDiscount] = useState(false);
   const { cart } = useGlobalContext();
   let subTotal = 0;
   for (let i = 0; i < cart.items.length; i++) {
@@ -19,8 +17,8 @@ const Checkout = () => {
     <div className="checkout">
       <p className="checkout-title">My Cart</p>
       <ul>
-        {cart.items.map((item) => {
-          return <CheckoutItem checkoutItem={item} />;
+        {cart.items.map((item, index) => {
+          return <CheckoutItem key={index} checkoutItem={item} />;
         })}
       </ul>
       <div className="checkout-info">

@@ -9,9 +9,11 @@ import Shop from "./pages/Shop";
 import Brands from "./pages/Brands";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
-import Checkout from "./components/Checkout";
 import SingleBrand from "./pages/SingleBrand";
 import SingleProduct from "./pages/SingleProduct";
+import Information from "./pages/Information";
+import Shipping from "./pages/Shipping";
+import Payment from "./pages/Payment";
 
 // Components
 import Navbar from "./components/Navbar";
@@ -40,8 +42,14 @@ const App = () => {
           <Route path="/contact">
             <Contact />
           </Route>
-          <Route path="/checkout">
-            <Checkout />
+          <Route path="/checkout/information">
+            <Information />
+          </Route>
+          <Route path="/checkout/shipping">
+            <Shipping />
+          </Route>
+          <Route path="/checkout/payment">
+            <Payment />
           </Route>
           <Route exact path="/:brand">
             <SingleBrand />

@@ -754,15 +754,18 @@ Checkout
 ===============
 */
 .checkout-container {
-  width: 960px;
+  width: 90%;
+  min-width: 528px;
   margin: 0 auto;
-  margin-top: 100px;
+  padding-top: 100px;
   display: grid;
-  grid-template-columns: 528px 288px;
-  grid-column-gap: 52px;
+  grid-template-columns: auto 616px;
+  grid-column-gap: 64px;
 }
 .checkout {
-  width: 528px;
+  border-left: 1px solid lightgray;
+  padding-left: 64px;
+  width: fit-content;
 }
 .checkout-title {
   font-size: 24px;
@@ -800,6 +803,9 @@ Checkout
   height: 136px;
   margin-top: 16px;
   border-bottom: 1px solid gray;
+}
+.checkout-total {
+  padding-top: 16px;
 }
 .checkout-info dt {
   float: left;
@@ -880,4 +886,149 @@ CheckoutItem
 }
 .checkout-email {
   padding-top: 16px;
+}
+
+/*
+===============
+Information
+===============
+*/
+.information-title {
+  font-size: 24px;
+  border-bottom: 1px solid gray;
+  padding-bottom: 8px;
+  margin: 0;
+}
+.checkout-container input {
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: solid 2px lightgray;
+  outline: none;
+  transition: 0.3s;
+}
+#email {
+  width: 100%;
+  margin: 16px 0 32px;
+}
+#email:focus {
+  border: solid 2px darkolivegreen;
+}
+.information-delivery {
+  margin: 16px 0 32px;
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid lightgray;
+}
+.information-deliveryOption {
+  display: grid;
+  grid-template-columns: 32px auto;
+  width: 100%;
+  background: transparent;
+  padding: 12px 0;
+  border: transparent;
+  color: darkolivegreen;
+}
+.underline {
+  border-bottom: 2px solid lightgray;
+}
+.information-deliveryOption input {
+  left: 16px;
+  margin: auto;
+  color: darkolivegreen;
+}
+.information-deliveryOption label {
+  width: 100%;
+  cursor: pointer;
+}
+.information-shipping {
+  margin: 16px 0 0;
+}
+#firstName {
+  margin: 16px 0 0;
+  width: 49%;
+  float: left;
+}
+#lastName {
+  margin: 16px 0 0;
+  width: 49%;
+  float: right;
+}
+#address {
+  margin: 16px 0 0;
+  width: 100%;
+}
+#apartment {
+  margin: 16px 0 0;
+  width: 100%;
+}
+#city {
+  margin: 16px 0 0;
+  width: 100%;
+}
+#country {
+  margin: 16px 0 0;
+  width: 32%;
+}
+#province {
+  margin: 16px 2% 0;
+  width: 32%;
+}
+#postalCode {
+  margin: 16px 0 0;
+  width: 32%;
+}
+#phoneNumber {
+  margin: 16px 0 0;
+  width: 100%;
+}
+.information-next {
+  margin: 32px 0;
+  height: 64px;
+}
+.information-pickup {
+  margin: 16px 0 0;
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid lightgray;
+}
+.information-pickupOption {
+  display: grid;
+  grid-template-columns: 32px auto;
+  width: 100%;
+  background: transparent;
+  padding: 12px 0;
+  color: darkolivegreen;
+}
+.information-pickupOption input {
+  left: 16px;
+  margin: auto;
+  color: darkolivegreen;
+}
+.information-pickupOption label {
+  width: 100%;
+  cursor: pointer;
+}
+.location {
+  float: left;
+  width: 80%;
+  margin: 0;
+}
+.price {
+  float: right;
+  margin: 0;
+  padding-right: 16px;
+  font-weight: bolder;
+}
+.address {
+  float: left;
+  width: 80%;
+  margin: 0;
+  font-size: 12px;
+}
+.time {
+  float: right;
+  margin: 0;
+  padding-right: 16px;
+  font-size: 12px;
 }

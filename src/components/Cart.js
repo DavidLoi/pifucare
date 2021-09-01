@@ -35,7 +35,7 @@ const Cart = () => {
             </div>
           </div>
           <div className="cart-footer">
-            <Link to="/checkout">
+            <Link to="/checkout/information">
               <button className="btn-rect" onClick={closeCart}>
                 Checkout
               </button>
