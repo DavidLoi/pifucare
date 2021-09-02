@@ -12,6 +12,19 @@ const AppProvider = ({ children }) => {
     ],
     total: n.toFixed(2),
   });
+  const [email, setEmail] = useState("");
+  const [shippingInfo, setShippingInfo] = useState({
+    firstName: "",
+    lastName: "",
+    address: "",
+    apartment: "",
+    city: "",
+    country: "",
+    province: "",
+    postalCode: "",
+    phoneNumber: "",
+  });
+  const [pickupLocation, setPickupLocation] = useState("");
 
   const openCart = () => {
     setIsCartOpen(true);
@@ -89,6 +102,12 @@ const AppProvider = ({ children }) => {
         remove,
         increase,
         decrease,
+        email,
+        setEmail,
+        shippingInfo,
+        setShippingInfo,
+        pickupLocation,
+        setPickupLocation,
       }}
     >
       {children}

@@ -769,7 +769,7 @@ Checkout
 }
 .checkout-title {
   font-size: 24px;
-  padding-bottom: 16px;
+  padding-bottom: 8px;
   border-bottom: 1px solid gray;
   margin-bottom: 0px;
 }
@@ -800,12 +800,12 @@ Checkout
   font-size: 16px;
 }
 .checkout-subtotal dl {
-  height: 136px;
-  margin-top: 16px;
+  height: 128px;
+  margin-top: 8px;
   border-bottom: 1px solid gray;
 }
 .checkout-total {
-  padding-top: 16px;
+  padding-top: 8px;
 }
 .checkout-info dt {
   float: left;
@@ -839,7 +839,7 @@ CheckoutItem
 .checkoutItem-container {
   display: grid;
   grid-template-columns: 122px 300px 90px 16px;
-  padding: 32px 0px;
+  padding: 16px 0px;
   border-bottom: 1px solid gray;
 }
 .checkoutItem-btn {
@@ -1022,7 +1022,7 @@ Information
 }
 .address {
   float: left;
-  width: 80%;
+  width: 70%;
   margin: 0;
   font-size: 12px;
 }
@@ -1031,4 +1031,7 @@ Information
   margin: 0;
   padding-right: 16px;
   font-size: 12px;
+}
+.invalid {
+  pointer-events: none;
 }
