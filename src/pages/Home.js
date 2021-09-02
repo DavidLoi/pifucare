@@ -27,7 +27,7 @@ const Home = () => {
                 window.open("https://www.instagram.com/pifucare/", "_blank");
               }}
             >
-              instagram
+              Instagram
             </button>
           </div>
         </div>
@@ -79,7 +79,7 @@ const Home = () => {
               setClicked(true);
             }}
           >
-            load more
+            Load More
           </button>
         </div>
       </div>

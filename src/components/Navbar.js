@@ -52,7 +52,7 @@ const Navbar = () => {
               <FaInstagram />
             </a>
           </li>
-          <li>
+          {/* <li>
             <a
               className="nav-link"
               href="https://www.instagram.com/pifucare/"
@@ -71,7 +71,7 @@ const Navbar = () => {
             >
               <FaChevronDown />
             </a>
-          </li>
+          </li> */}
           <li>
             <button className="nav-link" onClick={openCart}>
               <FaShoppingCart />

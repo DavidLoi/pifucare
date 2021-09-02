@@ -56,7 +56,7 @@ const Information = () => {
               <input type="tel" id="phoneNumber" placeholder="Phone number" />
               <Link to="/checkout/shipping">
                 <button className="btn-rect information-next">
-                  Continue to shipping
+                  Continue to Shipping
                 </button>
               </Link>
             </div>
@@ -93,7 +93,7 @@ const Information = () => {
               </div>
               <Link to="/checkout/payment">
                 <button className="btn-rect information-next">
-                  Continue to payment
+                  Continue to Payment
                 </button>
               </Link>
             </div>
