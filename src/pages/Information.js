@@ -15,6 +15,8 @@ const Information = () => {
     pickupLocation,
     setPickupLocation,
   } = useGlobalContext();
+  var postalCodeEx = /^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$/;
+  var phoneNumberEx = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
 
   return (
     <div className="checkout-container">
@@ -170,8 +172,8 @@ const Information = () => {
                     shippingInfo.city &&
                     shippingInfo.country &&
                     shippingInfo.province &&
-                    shippingInfo.postalCode &&
-                    shippingInfo.phoneNumber &&
+                    postalCodeEx.exec(shippingInfo.postalCode) &&
+                    phoneNumberEx.exec(shippingInfo.phoneNumber) &&
                     email.includes("@")
                       ? "btn-rect information-next"
                       : "btn-rect information-next invalid"
