@@ -42,13 +42,13 @@ const App = () => {
           <Route path="/contact">
             <Contact />
           </Route>
-          <Route path="/checkout/information">
+          <Route exact path="/checkout/information">
             <Information />
           </Route>
-          <Route path="/checkout/shipping">
+          <Route exact path="/checkout/shipping">
             <Shipping />
           </Route>
-          <Route path="/checkout/payment">
+          <Route path="/checkout/:type/payment">
             <Payment />
           </Route>
           <Route exact path="/:brand">

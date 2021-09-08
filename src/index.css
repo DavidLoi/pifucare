@@ -72,6 +72,9 @@ p {
     line-height: 1;
   }
 }
+.bold {
+  font-weight: bold;
+}
 
 /*
 =============== 
@@ -919,6 +922,7 @@ Information
   width: 100%;
   border-radius: 8px;
   border: 2px solid lightgray;
+  overflow: hidden;
 }
 .information-deliveryOption {
   display: grid;
@@ -966,17 +970,16 @@ Information
   margin: 16px 0 0;
   width: 100%;
 }
-#country {
-  margin: 16px 0 0;
-  width: 32%;
-}
-#province {
-  margin: 16px 2% 0;
-  width: 32%;
+.selector {
+  outline: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: solid 2px lightgray;
+  margin-top: 16px;
+  width: 100%;
 }
 #postalCode {
-  margin: 16px 0 0;
-  width: 32%;
+  margin-top: 16px;
 }
 #phoneNumber {
   margin: 16px 0 0;
@@ -1034,4 +1037,78 @@ Information
 }
 .invalid {
   pointer-events: none;
+}
+.row {
+  display: grid;
+  height: 44px;
+  grid-template-columns: 32% 32% 32%;
+  grid-gap: 2% 2%;
+  margin: 0 0 16px;
+}
+
+/*
+===============
+Shipping
+===============
+*/
+.shipping-informationWrapper {
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid lightgray;
+  margin-bottom: 32px;
+}
+.shipping-information {
+  display: grid;
+  grid-template-columns: 15% auto;
+  margin: 0 16px;
+}
+.shipping-information p {
+  padding: 16px 0;
+  margin: 0;
+}
+.shipping-label {
+  min-width: 60px;
+}
+.return {
+  height: 64px;
+  display: inline-block;
+  padding-left: 16px;
+}
+.return p {
+  cursor: pointer;
+}
+
+/*
+===============
+Payment
+===============
+*/
+.payment-information {
+  display: grid;
+  grid-template-columns: 15% auto;
+  padding: 16px;
+}
+.payment-label {
+  margin: 0;
+}
+.payment-main {
+  display: inline;
+  margin: 0;
+}
+.payment-sub {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+.payment-emt {
+  padding: 32px 80px;
+  border-bottom: 2px solid lightgray;
+  background-color: #f2f3f4;
+}
+.payment-emt p {
+  margin: 0;
+}
+.payment-shipping {
+  padding: 16px;
+  background-color: #f2f3f4;
+  border-top: 2px solid lightgray;
 }

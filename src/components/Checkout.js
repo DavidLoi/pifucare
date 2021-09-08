@@ -9,8 +9,8 @@ const Checkout = () => {
     let item = cart.items[i];
     subTotal += item.amount * item.cost;
   }
-  let taxes = Math.round(subTotal * 13) / 100;
-  let total = Math.round(subTotal * 113) / 100;
+  let taxes = Math.round((subTotal + cart.shipping) * 13) / 100;
+  let total = Math.round((subTotal + cart.shipping) * 113) / 100;
 
   return (
     // <div className="checkout-container">
@@ -27,7 +27,11 @@ const Checkout = () => {
             <dt>Subtotal</dt>
             <dd>C${subTotal.toFixed(2)}</dd>
             <dt>Shipping</dt>
-            <dd>Calculated at next step</dd>
+            <dd>
+              {cart.shipping >= 0
+                ? `C$${cart.shipping.toFixed(2)}`
+                : "Calculated at next step"}
+            </dd>
             <dt>Taxes</dt>
             <dd>C${taxes.toFixed(2)}</dd>
           </dl>

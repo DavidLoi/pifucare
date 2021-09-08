@@ -10,6 +10,7 @@ const AppProvider = ({ children }) => {
       { id: 1, amount: 2, cost: 2.5 },
       { id: 2, amount: 1, cost: 2.5 },
     ],
+    shipping: -1,
     total: n.toFixed(2),
   });
   const [email, setEmail] = useState("");
@@ -19,12 +20,15 @@ const AppProvider = ({ children }) => {
     address: "",
     apartment: "",
     city: "",
-    country: "",
-    province: "",
+    country: "Canada",
+    province: "Ontario",
     postalCode: "",
     phoneNumber: "",
   });
   const [pickupLocation, setPickupLocation] = useState("");
+  const [method, setMethod] = useState(["", "", ""]);
+  const [payMethod, setPayMethod] = useState("");
+  const [billingAddress, setBillingAddress] = useState(false);
 
   const openCart = () => {
     setIsCartOpen(true);
@@ -98,6 +102,7 @@ const AppProvider = ({ children }) => {
         openCart,
         closeCart,
         cart,
+        setCart,
         add,
         remove,
         increase,
@@ -108,6 +113,12 @@ const AppProvider = ({ children }) => {
         setShippingInfo,
         pickupLocation,
         setPickupLocation,
+        method,
+        setMethod,
+        payMethod,
+        setPayMethod,
+        billingAddress,
+        setBillingAddress,
       }}
     >
       {children}
